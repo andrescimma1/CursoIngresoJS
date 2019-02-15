@@ -1,6 +1,6 @@
 function mostrar()
 {
-	var Edad;
+	var Edad, mensaje;
 
 	Edad = edad.value; //tomo la edad  
 
@@ -8,12 +8,12 @@ function mostrar()
 
 	if(Edad > "17")
 	{
-		alert("Mayor de edad");
+		mensaje = "Mayor de edad";
 	}
 	else
 	{
-		alert("Menor de edad");
+		mensaje = "Menor de edad";
 	}
-
+	alert(mensaje);
 
 }//FIN DE LA FUNCIÓN
