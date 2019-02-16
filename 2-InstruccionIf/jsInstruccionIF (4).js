@@ -1,6 +1,20 @@
 function mostrar()
 {
-//tomo la edad  
+	var Edad, mensaje;
+
+	Edad=edad.value;	//tomo la edad  
+
+	Edad=parseInt(Edad);
+
+	if(Edad > 12 && Edad < 18)
+	{
+		mensaje="Es adolescente";
+	}
+	else
+	{
+		mensaje="No es adolescente";
+	}
+	alert(mensaje);
 
 
 
