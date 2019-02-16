@@ -15,6 +15,6 @@ function mostrarAumento()
 
 	resultado1 = sueldo1 * 1.10;
 
-	document.getElementById('sueldo').value=resultado;
+	document.getElementById('resultado').value=resultado1;
 	
 }

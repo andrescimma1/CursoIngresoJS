@@ -9,5 +9,9 @@ function mostrarAumento()
 	Importe=importe.value;
 	Importe=parseInt(Importe);
 
+	Resultado=Importe * 0.75;
+
+	document.getElementById('resultado').value=Resultado;
+
 	
 }
