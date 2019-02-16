@@ -13,14 +13,57 @@ var contadorIntentos;
 function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
-	 
-		//alert(numeroSecreto );
+	numeroSecreto=Math.floor((Math.random()* 100)+ 1);
+	//alert(numeroSecreto);
+	contadorIntentos=0;
 	
 
 }
 
 function verificar()
-{
-	
-	
+{	
+	var mensaje;
+	var numeroIngresado;
+	contadorIntentos=contadorIntentos+1;
+	intentos.value=contadorIntentos;
+	numeroIngresado=numero.value;
+	//alert(numeroIngresado);
+
+
+	if(numeroIngresado == numeroSecreto)
+	{
+		switch(intentos)
+		{
+			case 1:
+				mensaje= "Alien";
+				break;
+			case 2:
+				mensaje= "Casi en el primero";
+				break;
+			case 3:
+				mensaje= "Nada mal";
+				break;
+			case 4:
+				mensaje= "Podrias hacerlo mejor";
+				break;
+			case 5:
+				mensaje= "Bueno..?";
+				break;
+			default:
+				mensaje= "Segui participando, perdedor";
+				break;
+		}
+	}
+	else
+	{
+		if (numeroIngresado<numeroSecreto)
+		{
+			mensaje="Falta";
+		}
+		else
+		{
+			mensaje="Te pasaste";
+		}
+	}
+	alert(mensaje);
 }
