@@ -9,6 +9,9 @@ function mostrar()
 	var caso;
 	var cantidadPositivo = 0;
 	var cantidadNegativo = 0;
+	var numeroPar;
+	var cantidadPar = 0;
+	var promedio;
 
 	while(respuesta=="si")
 	{
@@ -18,13 +21,18 @@ function mostrar()
 
 		if(numero > 0)
 		{
-			positivo = numero;
+			positivo = positivo + numero;
 			cantidadPositivo = cantidadPositivo + 1;
 		}
 		else
 		{
-			negativo = numero;
+			negativo = negativo + numero;
 			cantidadNegativo = cantidadNegativo + 1;
+		}
+		if(numero % 2 == 0)
+		{
+			numeroPar = numero;
+			cantidadPar = cantidadPar + 1;
 		}
 		respuesta = prompt ("==> Si, para continuar");
 	}
@@ -37,12 +45,10 @@ function mostrar()
 		{
 			case 1:
 				negativo = negativo + numero;
-				mensaje = negativo;
 				document.write(negativo);
 				break;
 			case 2:
 				positivo = positivo + numero;
-				mensaje = positivo;
 				document.write(positivo);
 				break;
 			case 3:
@@ -51,6 +57,14 @@ function mostrar()
 			case 4:
 				document.write(cantidadNegativo);
 				break;
+			case 6:
+				document.write(cantidadPar);
+				break;
+			case 7:
+				promedio = positivo / cantidadPositivo;
+				document.write(promedio);
+				break;
+
 
 			default:
 				break;
