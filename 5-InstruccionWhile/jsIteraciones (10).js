@@ -4,14 +4,17 @@ function mostrar()
 	var contador=0;
 	//declarar contadores y variables 
 	var positivo=0;
-	var negativo=1;
+	var negativo=0;
 	var respuesta="si";
 	var caso;
 	var cantidadPositivo = 0;
 	var cantidadNegativo = 0;
 	var numeroPar;
 	var cantidadPar = 0;
-	var promedio;
+	var cantidadDeCeros = 0;
+	var promedioP;
+	var promedioN;
+	var diferenciaPyN;
 
 	while(respuesta=="si")
 	{
@@ -22,11 +25,13 @@ function mostrar()
 		if(numero > 0)
 		{
 			positivo = positivo + numero;
+			positivo = parseInt(positivo);
 			cantidadPositivo = cantidadPositivo + 1;
 		}
 		else
 		{
 			negativo = negativo + numero;
+			negativo = parseInt(negativo);
 			cantidadNegativo = cantidadNegativo + 1;
 		}
 		if(numero % 2 == 0)
@@ -34,51 +39,24 @@ function mostrar()
 			numeroPar = numero;
 			cantidadPar = cantidadPar + 1;
 		}
-		respuesta = prompt ("==> Si, para continuar");
-	}
-
-
-	caso = prompt("Ingrese un caso entre el 1 y el 9 inclusive");
-	caso = parseInt(caso);
-
-	switch(caso)
+		if(numero == 0)
 		{
-			case 1:
-				negativo = negativo + numero;
-				document.write(negativo);
-				break;
-			case 2:
-				positivo = positivo + numero;
-				document.write(positivo);
-				break;
-			case 3:
-				document.write(cantidadPositivo);
-				break;
-			case 4:
-				document.write(cantidadNegativo);
-				break;
-			case 6:
-				document.write(cantidadPar);
-				break;
-			case 7:
-				promedio = positivo / cantidadPositivo;
-				document.write(promedio);
-				break;
-
-
-			default:
-				break;
-
-
-
-
-
+			cantidadDeCeros = cantidadDeCeros + 1;
 		}
+		respuesta = prompt ("==> 'si', para continuar");
+	}
+		promedioP = positivo / cantidadPositivo;
+		promedioN = negativo / cantidadNegativo;
+		diferenciaPyN = positivo - negativo;
+		diferenciaPyN = parseInt(diferenciaPyN);
 
-	
-		
-
-
-
-
+		document.write("La suma de los negativos es: " + negativo);
+		document.write("</br>La suma de los positivos es: " + positivo);
+		document.write("</br>La cantidad de positivos es: " + cantidadPositivo);
+		document.write("</br>La cantidad de negativos es: " + cantidadNegativo);
+		document.write("</br>La cantidad de ceros es: " + cantidadDeCeros);
+		document.write("</br>La cantidad de numeros pares es: " + cantidadPar);
+		document.write("</br>El promedio de positivos es: " + promedioP);
+		document.write("</br>El promedio de negativos es: " + promedioN);
+		document.write("</br>La diferencia entre positivos y negativos es: " + diferenciaPyN);
 }//FIN DE LA FUNCIÓN
