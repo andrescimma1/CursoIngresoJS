@@ -29,12 +29,12 @@ function mostrar()
 		velocidadKm = prompt("Para el vehiculo #" + vehiculos + " Ingrese una velocidad entre 0 y 250: ");
 		velocidadKm = parseInt(velocidadKm);
 
-		velocidadPromedio = velocidadPromedio + velocidadKm;
-
 		while(velocidadKm < 0 || velocidadKm > 250)
 		{
 			velocidadKm = prompt("Error, ingrese una velocidad entre 0 y 250: ");
 		}
+
+		velocidadPromedio = velocidadPromedio + velocidadKm;
 
 		combustible = prompt("Para el vehiculo #" + vehiculos + "Ingrese el tipo de combustible: 's' para solido o 'l' para liquido: ");
 
