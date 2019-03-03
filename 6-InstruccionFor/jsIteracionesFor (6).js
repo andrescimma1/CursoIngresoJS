@@ -25,5 +25,7 @@ function mostrar()
 
 	}
 
+	alert("La cantidad de numeros pares es de: " + contador);
+
 
 }//FIN DE LA FUNCIÓN
