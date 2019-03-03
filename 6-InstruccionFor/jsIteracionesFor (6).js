@@ -14,7 +14,7 @@ function mostrar()
 		numeroIngresado = numeroIngresado + 1;
 		if(numeroIngresado%2 == 0)
 		{
-			alert(numeroIngresado);
+			document.write(numeroIngresado + "</br>");
 			contador = contador + 1;
 		}
 
@@ -25,7 +25,7 @@ function mostrar()
 
 	}
 
-	alert("La cantidad de numeros pares es de: " + contador);
+	document.write("La cantidad de numeros pares es de: " + contador);
 
 
 }//FIN DE LA FUNCIÓN
